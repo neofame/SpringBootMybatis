@@ -25,7 +25,13 @@ public class TestController {
 
         cityService.saveCity(new City("뉴욕", "미국", 1_000_000L));
         cityService.saveCity(new City("런던", "영국", 2_000_000L));
-        cityService.saveCity(new City("파리", "프랑스", 3_000_000L));
+        cityService.saveCity(new City("파리", """ 
+                프랑스AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                프랑스AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                프랑스AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                프랑스AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                프랑스AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                """, 3_000_000L));
 
         log.info("Insert : {}", "Save Complete");
 

@@ -10,5 +10,11 @@
             values
         (#{name} , #{country}, #{population})
     </insert>
-
+    <select id="selectAllCity" resultType="City">
+        SELECT ID
+             ,NAME
+             ,COUNTRY
+             ,POPULATION
+        FROM CITY
+    </select>
 </mapper>

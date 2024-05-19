@@ -4,7 +4,6 @@ import lombok.Data;
 import org.apache.ibatis.type.Alias;
 
 @Data
-@Alias("city")
 public class City {
     private Long id;
     private String name;
