@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Slf4j
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class TestController {
 
@@ -21,6 +22,7 @@ public class TestController {
     CityService cityService;
 
     @GetMapping("/save")
+    @ResponseBody
     public String save() {
 
         cityService.saveCity(new City("뉴욕", "미국", 1_000_000L));
@@ -38,6 +40,7 @@ public class TestController {
         return "Save Complete";
     }
     @GetMapping("/select")
+    @ResponseBody
     public ResponseEntity<List<City>> CityService() {
 
         List<City> city = cityService.selectList();
